@@ -1,8 +1,7 @@
 ### ADR-001: Money Representation
 
 **Date:** 2026-10-06
-**Status:** Proposed
-**Blockers:** Awaiting Money class to be developed 
+**Status:** Accepted 
 
 #### Context
 - Financial figures must be **exact**

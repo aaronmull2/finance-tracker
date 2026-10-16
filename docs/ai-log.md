@@ -3,6 +3,9 @@
  - This include the explanation of code
  - Review Required before any implementation.
 
-##  Mistakes
-1. Flyaway configuration done incorrectly had to correct in order to allow for db/schema relations to work;
- - Imported flyaway dependcy into the congfig prompted itself to correct anmd add package into the database config.
+## Mistakes
+
+| Date | What I asked | What went wrong | How I caught it |
+|------|-------------|-----------------|-----------------|
+| 2026-10-06 | Flyway auto-configuration | Flyway didn't run migrations — Spring Boot 4.x doesn't auto-configure Flyway the same way as 3.x | No tables found in DB; fixed by creating explicit `DatabaseConfig.java` bean |
+| 2026-10-16 | Set up Testcontainers integration test | Testcontainers couldn't connect to Docker Desktop on Windows — named pipes returned Status 400 with empty data | Test failed; switched to docker-compose Postgres instead |
